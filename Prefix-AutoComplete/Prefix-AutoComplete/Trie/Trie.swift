@@ -8,62 +8,6 @@
 
 import Foundation
 
-class TrieWordNode {
-
-  let value: Character?
-  var children: [TrieWordNode]
-  var isWord = false
-  var word: String?
-
-  init(value: Character) {
-    self.value = value
-    self.children = []
-  }
-
-  init() {
-    self.value = nil
-    self.children = []
-  }
-
-  init(value: Character, word: String) {
-    self.word = word
-    self.value = value
-    children = []
-  }
-
-}
-
-enum StackError: Error {
-  case StackOutOfBoundsError
-}
-
-class Stack<T> {
-  var _stack: [T]
-  var length: Int
-
-  init() {
-    self._stack = []
-    self.length = 0
-  }
-
-  func push(value: T) {
-    self._stack.append(value)
-    self.length += 1
-  }
-
-  func pop() throws -> T {
-    guard length > 0 else {
-      throw StackError.StackOutOfBoundsError
-    }
-    length -= 1
-    return _stack.removeLast()
-  }
-
-  func isEmpty() -> Bool {
-    return length == 0
-  }
-}
-
 // trie with level compression
 class Trie {
 
@@ -168,7 +112,6 @@ class Trie {
     return returnAll(currentRoot: curTrieWordNode)
   }
 
-  // essentially DFS
   func returnAll(currentRoot: TrieWordNode) -> [String] {
     var matchedWords = [String]()
 
@@ -193,31 +136,6 @@ class Trie {
     }
 
     return matchedWords
-  }
-
-}
-
-//From Stack overflow
-extension String {
-
-  subscript (i: Int) -> String {
-    return self[i ..< i + 1]
-  }
-
-  func substring(fromIndex: Int) -> String {
-    return self[min(fromIndex, count) ..< count]
-  }
-
-  func substring(toIndex: Int) -> String {
-    return self[0 ..< max(0, toIndex)]
-  }
-
-  subscript (r: Range<Int>) -> String {
-    let range = Range(uncheckedBounds: (lower: max(0, min(count, r.lowerBound)),
-                                        upper: min(count, max(0, r.upperBound))))
-    let start = index(startIndex, offsetBy: range.lowerBound)
-    let end = index(start, offsetBy: range.upperBound - range.lowerBound)
-    return String(self[start ..< end])
   }
 
 }
