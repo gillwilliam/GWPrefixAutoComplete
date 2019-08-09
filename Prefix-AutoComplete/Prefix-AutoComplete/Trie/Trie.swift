@@ -12,8 +12,6 @@ import Foundation
 class Trie {
 
   var isStatic: Bool
-
-  // does it make semantic sense to have no words?
   let listOfWords: [String]
   let root: TrieWordNode
 
@@ -27,6 +25,7 @@ class Trie {
   init(words: [String], isStatic:Bool = true) {
     // params: list of words to filter through
     self.isStatic = isStatic
+
     // dedup the list first or expect them to be unique?
     self.listOfWords = words
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48564D4E22EB845200BBBE9E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48564D4D22EB845200BBBE9E /* String.swift */; };
+		48564D5022EBBE8800BBBE9E /* PerformanceTestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48564D4F22EBBE8800BBBE9E /* PerformanceTestUtils.swift */; };
 		48EFF83D22EB760900A1F73A /* Prefix_AutoComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EFF83322EB760900A1F73A /* Prefix_AutoComplete.framework */; };
 		48EFF84222EB760900A1F73A /* Prefix_AutoCompleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EFF84122EB760900A1F73A /* Prefix_AutoCompleteTests.swift */; };
 		48EFF84422EB760900A1F73A /* Prefix_AutoComplete.h in Headers */ = {isa = PBXBuildFile; fileRef = 48EFF83622EB760900A1F73A /* Prefix_AutoComplete.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		48564D4D22EB845200BBBE9E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		48564D4F22EBBE8800BBBE9E /* PerformanceTestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTestUtils.swift; sourceTree = "<group>"; };
 		48EFF83322EB760900A1F73A /* Prefix_AutoComplete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prefix_AutoComplete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EFF83622EB760900A1F73A /* Prefix_AutoComplete.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix_AutoComplete.h; sourceTree = "<group>"; };
 		48EFF83722EB760900A1F73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				48EFF84122EB760900A1F73A /* Prefix_AutoCompleteTests.swift */,
 				48EFF84322EB760900A1F73A /* Info.plist */,
 				48EFF85022EB767D00A1F73A /* TrieTests.swift */,
+				48564D4F22EBBE8800BBBE9E /* PerformanceTestUtils.swift */,
 			);
 			path = "Prefix-AutoCompleteTests";
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48564D5022EBBE8800BBBE9E /* PerformanceTestUtils.swift in Sources */,
 				48EFF84222EB760900A1F73A /* Prefix_AutoCompleteTests.swift in Sources */,
 				48EFF85122EB767D00A1F73A /* TrieTests.swift in Sources */,
 			);

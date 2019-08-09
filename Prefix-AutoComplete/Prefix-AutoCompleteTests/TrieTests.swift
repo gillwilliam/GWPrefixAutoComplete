@@ -33,8 +33,27 @@ class TrieTests: XCTestCase {
     XCTAssert(myTrie.returnAllPrefixMatches(search: "ab") == ["abc", "abcde"], "basic test")
   }
 
+  func testRandom() {
+    let myRandomWords = PerformanceTestUtils().generateWords(numWords: 1000)
+
+    print(myRandomWords)
+
+    let randomSearchTerm = myRandomWords[Int(arc4random_uniform(UInt32(myRandomWords.count-1)))]
+    let bruteForceResults = PerformanceTestUtils().bruteForceSearch(words: myRandomWords, searchTerm: randomSearchTerm)
+
+    let myTrie = Trie(words: myRandomWords)
+    let trieSearchResults = myTrie.returnAllPrefixMatches(search: randomSearchTerm)
+    print(trieSearchResults)
+    print(bruteForceResults)
+    XCTAssert(trieSearchResults == bruteForceResults)
+  }
+
   func testPerformanceExample() {
     // This is an example of a performance test case.
+
+    // let myRandomWords = PerformanceTestUtils().generateWords(numWords: 100)
+    // let searchWord = PerformanceTestUtils().generateWord()
+
     self.measure {
       // Put the code you want to measure the time of here.
     }
