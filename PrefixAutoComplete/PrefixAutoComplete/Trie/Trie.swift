@@ -54,7 +54,7 @@ class Trie {
     var curTrieWordNode = root
 
     for letterIndex in 0..<word.count {
-      let letter = Character(word[letterIndex])
+      let letter = Character(String(word[letterIndex]))
 
       var foundLetter = false
       for child in curTrieWordNode.children where child.value! == letter { //optimize (flag or do based on length of words array) with a 26 char array?
