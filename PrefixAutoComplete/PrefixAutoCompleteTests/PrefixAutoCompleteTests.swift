@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Prefix_AutoComplete
+@testable import PrefixAutoComplete
 
 class Prefix_AutoCompleteTests: XCTestCase {
 

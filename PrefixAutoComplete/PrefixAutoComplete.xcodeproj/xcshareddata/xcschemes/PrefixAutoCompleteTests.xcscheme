@@ -17,9 +17,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "48EFF83B22EB760900A1F73A"
-               BuildableName = "Prefix-AutoCompleteTests.xctest"
-               BlueprintName = "Prefix-AutoCompleteTests"
-               ReferencedContainer = "container:Prefix-AutoComplete.xcodeproj">
+               BuildableName = "PrefixAutoCompleteTests.xctest"
+               BlueprintName = "PrefixAutoCompleteTests"
+               ReferencedContainer = "container:PrefixAutoComplete.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

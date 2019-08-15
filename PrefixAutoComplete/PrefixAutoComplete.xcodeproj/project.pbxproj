@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		48564D4E22EB845200BBBE9E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48564D4D22EB845200BBBE9E /* String.swift */; };
 		48564D5022EBBE8800BBBE9E /* PerformanceTestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48564D4F22EBBE8800BBBE9E /* PerformanceTestUtils.swift */; };
-		48EFF83D22EB760900A1F73A /* Prefix_AutoComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EFF83322EB760900A1F73A /* Prefix_AutoComplete.framework */; };
-		48EFF84222EB760900A1F73A /* Prefix_AutoCompleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EFF84122EB760900A1F73A /* Prefix_AutoCompleteTests.swift */; };
+		48EFF83D22EB760900A1F73A /* PrefixAutoComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EFF83322EB760900A1F73A /* PrefixAutoComplete.framework */; };
+		48EFF84222EB760900A1F73A /* PrefixAutoCompleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EFF84122EB760900A1F73A /* PrefixAutoCompleteTests.swift */; };
 		48EFF84422EB760900A1F73A /* Prefix_AutoComplete.h in Headers */ = {isa = PBXBuildFile; fileRef = 48EFF83622EB760900A1F73A /* Prefix_AutoComplete.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48EFF84F22EB765200A1F73A /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EFF84E22EB765200A1F73A /* Trie.swift */; };
 		48EFF85122EB767D00A1F73A /* TrieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EFF85022EB767D00A1F73A /* TrieTests.swift */; };
@@ -31,11 +31,11 @@
 /* Begin PBXFileReference section */
 		48564D4D22EB845200BBBE9E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		48564D4F22EBBE8800BBBE9E /* PerformanceTestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTestUtils.swift; sourceTree = "<group>"; };
-		48EFF83322EB760900A1F73A /* Prefix_AutoComplete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prefix_AutoComplete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48EFF83322EB760900A1F73A /* PrefixAutoComplete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrefixAutoComplete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EFF83622EB760900A1F73A /* Prefix_AutoComplete.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix_AutoComplete.h; sourceTree = "<group>"; };
 		48EFF83722EB760900A1F73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48EFF83C22EB760900A1F73A /* Prefix-AutoCompleteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prefix-AutoCompleteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		48EFF84122EB760900A1F73A /* Prefix_AutoCompleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefix_AutoCompleteTests.swift; sourceTree = "<group>"; };
+		48EFF83C22EB760900A1F73A /* PrefixAutoCompleteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrefixAutoCompleteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48EFF84122EB760900A1F73A /* PrefixAutoCompleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixAutoCompleteTests.swift; sourceTree = "<group>"; };
 		48EFF84322EB760900A1F73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48EFF84E22EB765200A1F73A /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
 		48EFF85022EB767D00A1F73A /* TrieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrieTests.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48EFF83D22EB760900A1F73A /* Prefix_AutoComplete.framework in Frameworks */,
+				48EFF83D22EB760900A1F73A /* PrefixAutoComplete.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +65,8 @@
 		48EFF82922EB760900A1F73A = {
 			isa = PBXGroup;
 			children = (
-				48EFF83522EB760900A1F73A /* Prefix-AutoComplete */,
-				48EFF84022EB760900A1F73A /* Prefix-AutoCompleteTests */,
+				48EFF83522EB760900A1F73A /* PrefixAutoComplete */,
+				48EFF84022EB760900A1F73A /* PrefixAutoCompleteTests */,
 				48EFF83422EB760900A1F73A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,13 +74,13 @@
 		48EFF83422EB760900A1F73A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				48EFF83322EB760900A1F73A /* Prefix_AutoComplete.framework */,
-				48EFF83C22EB760900A1F73A /* Prefix-AutoCompleteTests.xctest */,
+				48EFF83322EB760900A1F73A /* PrefixAutoComplete.framework */,
+				48EFF83C22EB760900A1F73A /* PrefixAutoCompleteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		48EFF83522EB760900A1F73A /* Prefix-AutoComplete */ = {
+		48EFF83522EB760900A1F73A /* PrefixAutoComplete */ = {
 			isa = PBXGroup;
 			children = (
 				48EFF85622EB838600A1F73A /* utils */,
@@ -88,18 +88,18 @@
 				48EFF83622EB760900A1F73A /* Prefix_AutoComplete.h */,
 				48EFF83722EB760900A1F73A /* Info.plist */,
 			);
-			path = "Prefix-AutoComplete";
+			path = PrefixAutoComplete;
 			sourceTree = "<group>";
 		};
-		48EFF84022EB760900A1F73A /* Prefix-AutoCompleteTests */ = {
+		48EFF84022EB760900A1F73A /* PrefixAutoCompleteTests */ = {
 			isa = PBXGroup;
 			children = (
-				48EFF84122EB760900A1F73A /* Prefix_AutoCompleteTests.swift */,
+				48EFF84122EB760900A1F73A /* PrefixAutoCompleteTests.swift */,
 				48EFF84322EB760900A1F73A /* Info.plist */,
 				48EFF85022EB767D00A1F73A /* TrieTests.swift */,
 				48564D4F22EBBE8800BBBE9E /* PerformanceTestUtils.swift */,
 			);
-			path = "Prefix-AutoCompleteTests";
+			path = PrefixAutoCompleteTests;
 			sourceTree = "<group>";
 		};
 		48EFF84D22EB763C00A1F73A /* Trie */ = {
@@ -134,9 +134,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		48EFF83222EB760900A1F73A /* Prefix-AutoComplete */ = {
+		48EFF83222EB760900A1F73A /* PrefixAutoComplete */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48EFF84722EB760900A1F73A /* Build configuration list for PBXNativeTarget "Prefix-AutoComplete" */;
+			buildConfigurationList = 48EFF84722EB760900A1F73A /* Build configuration list for PBXNativeTarget "PrefixAutoComplete" */;
 			buildPhases = (
 				48EFF82E22EB760900A1F73A /* Headers */,
 				48EFF82F22EB760900A1F73A /* Sources */,
@@ -147,14 +147,14 @@
 			);
 			dependencies = (
 			);
-			name = "Prefix-AutoComplete";
+			name = PrefixAutoComplete;
 			productName = "Prefix-AutoComplete";
-			productReference = 48EFF83322EB760900A1F73A /* Prefix_AutoComplete.framework */;
+			productReference = 48EFF83322EB760900A1F73A /* PrefixAutoComplete.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		48EFF83B22EB760900A1F73A /* Prefix-AutoCompleteTests */ = {
+		48EFF83B22EB760900A1F73A /* PrefixAutoCompleteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48EFF84A22EB760900A1F73A /* Build configuration list for PBXNativeTarget "Prefix-AutoCompleteTests" */;
+			buildConfigurationList = 48EFF84A22EB760900A1F73A /* Build configuration list for PBXNativeTarget "PrefixAutoCompleteTests" */;
 			buildPhases = (
 				48EFF83822EB760900A1F73A /* Sources */,
 				48EFF83922EB760900A1F73A /* Frameworks */,
@@ -165,9 +165,9 @@
 			dependencies = (
 				48EFF83F22EB760900A1F73A /* PBXTargetDependency */,
 			);
-			name = "Prefix-AutoCompleteTests";
+			name = PrefixAutoCompleteTests;
 			productName = "Prefix-AutoCompleteTests";
-			productReference = 48EFF83C22EB760900A1F73A /* Prefix-AutoCompleteTests.xctest */;
+			productReference = 48EFF83C22EB760900A1F73A /* PrefixAutoCompleteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -189,7 +189,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 48EFF82D22EB760900A1F73A /* Build configuration list for PBXProject "Prefix-AutoComplete" */;
+			buildConfigurationList = 48EFF82D22EB760900A1F73A /* Build configuration list for PBXProject "PrefixAutoComplete" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -201,8 +201,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				48EFF83222EB760900A1F73A /* Prefix-AutoComplete */,
-				48EFF83B22EB760900A1F73A /* Prefix-AutoCompleteTests */,
+				48EFF83222EB760900A1F73A /* PrefixAutoComplete */,
+				48EFF83B22EB760900A1F73A /* PrefixAutoCompleteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -241,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48564D5022EBBE8800BBBE9E /* PerformanceTestUtils.swift in Sources */,
-				48EFF84222EB760900A1F73A /* Prefix_AutoCompleteTests.swift in Sources */,
+				48EFF84222EB760900A1F73A /* PrefixAutoCompleteTests.swift in Sources */,
 				48EFF85122EB767D00A1F73A /* TrieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,7 +251,7 @@
 /* Begin PBXTargetDependency section */
 		48EFF83F22EB760900A1F73A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 48EFF83222EB760900A1F73A /* Prefix-AutoComplete */;
+			target = 48EFF83222EB760900A1F73A /* PrefixAutoComplete */;
 			targetProxy = 48EFF83E22EB760900A1F73A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -390,14 +390,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Prefix-AutoComplete/Info.plist";
+				INFOPLIST_FILE = PrefixAutoComplete/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "WilliamGill.Prefix-AutoComplete";
+				PRODUCT_BUNDLE_IDENTIFIER = WilliamGill.PrefixAutoComplete;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -417,14 +417,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Prefix-AutoComplete/Info.plist";
+				INFOPLIST_FILE = PrefixAutoComplete/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "WilliamGill.Prefix-AutoComplete";
+				PRODUCT_BUNDLE_IDENTIFIER = WilliamGill.PrefixAutoComplete;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -438,13 +438,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D8H3HQNHY;
-				INFOPLIST_FILE = "Prefix-AutoCompleteTests/Info.plist";
+				INFOPLIST_FILE = PrefixAutoCompleteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "WilliamGill.Prefix-AutoCompleteTests";
+				PRODUCT_BUNDLE_IDENTIFIER = WilliamGill.PrefixAutoCompleteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,13 +457,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D8H3HQNHY;
-				INFOPLIST_FILE = "Prefix-AutoCompleteTests/Info.plist";
+				INFOPLIST_FILE = PrefixAutoCompleteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "WilliamGill.Prefix-AutoCompleteTests";
+				PRODUCT_BUNDLE_IDENTIFIER = WilliamGill.PrefixAutoCompleteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -473,7 +473,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		48EFF82D22EB760900A1F73A /* Build configuration list for PBXProject "Prefix-AutoComplete" */ = {
+		48EFF82D22EB760900A1F73A /* Build configuration list for PBXProject "PrefixAutoComplete" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48EFF84522EB760900A1F73A /* Debug */,
@@ -482,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48EFF84722EB760900A1F73A /* Build configuration list for PBXNativeTarget "Prefix-AutoComplete" */ = {
+		48EFF84722EB760900A1F73A /* Build configuration list for PBXNativeTarget "PrefixAutoComplete" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48EFF84822EB760900A1F73A /* Debug */,
@@ -491,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48EFF84A22EB760900A1F73A /* Build configuration list for PBXNativeTarget "Prefix-AutoCompleteTests" */ = {
+		48EFF84A22EB760900A1F73A /* Build configuration list for PBXNativeTarget "PrefixAutoCompleteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48EFF84B22EB760900A1F73A /* Debug */,
