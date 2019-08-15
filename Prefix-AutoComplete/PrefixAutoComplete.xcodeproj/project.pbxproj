@@ -65,8 +65,8 @@
 		48EFF82922EB760900A1F73A = {
 			isa = PBXGroup;
 			children = (
-				48EFF83522EB760900A1F73A /* Prefix-AutoComplete */,
-				48EFF84022EB760900A1F73A /* Prefix-AutoCompleteTests */,
+				48EFF83522EB760900A1F73A /* PrefixAutoComplete */,
+				48EFF84022EB760900A1F73A /* PrefixAutoCompleteTests */,
 				48EFF83422EB760900A1F73A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,7 +80,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		48EFF83522EB760900A1F73A /* Prefix-AutoComplete */ = {
+		48EFF83522EB760900A1F73A /* PrefixAutoComplete */ = {
 			isa = PBXGroup;
 			children = (
 				48EFF85622EB838600A1F73A /* utils */,
@@ -88,10 +88,10 @@
 				48EFF83622EB760900A1F73A /* Prefix_AutoComplete.h */,
 				48EFF83722EB760900A1F73A /* Info.plist */,
 			);
-			path = "Prefix-AutoComplete";
+			path = PrefixAutoComplete;
 			sourceTree = "<group>";
 		};
-		48EFF84022EB760900A1F73A /* Prefix-AutoCompleteTests */ = {
+		48EFF84022EB760900A1F73A /* PrefixAutoCompleteTests */ = {
 			isa = PBXGroup;
 			children = (
 				48EFF84122EB760900A1F73A /* Prefix_AutoCompleteTests.swift */,
@@ -99,7 +99,7 @@
 				48EFF85022EB767D00A1F73A /* TrieTests.swift */,
 				48564D4F22EBBE8800BBBE9E /* PerformanceTestUtils.swift */,
 			);
-			path = "Prefix-AutoCompleteTests";
+			path = PrefixAutoCompleteTests;
 			sourceTree = "<group>";
 		};
 		48EFF84D22EB763C00A1F73A /* Trie */ = {
