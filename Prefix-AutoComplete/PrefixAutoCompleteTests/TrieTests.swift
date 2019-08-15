@@ -9,7 +9,7 @@
 import Foundation
 
 import XCTest
-@testable import Prefix_AutoComplete
+@testable import PrefixAutoComplete
 
 class TrieTests: XCTestCase {
 
