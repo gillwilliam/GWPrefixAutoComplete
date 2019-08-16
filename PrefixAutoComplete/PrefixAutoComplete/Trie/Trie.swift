@@ -9,11 +9,10 @@
 import Foundation
 
 // trie with level compression
-class Trie {
+public class Trie<T: CanStringify> {
 
-  var isStatic: Bool
-  let listOfWords: [String]
-  let root: TrieWordNode
+  let listOfWords: [T]
+  let root: TrieWordNode<T>
 
   // early terminate if the search length is longer than the length of the longest word
   var longestLength = -1
@@ -22,11 +21,7 @@ class Trie {
 
   //root TrieWordNode
 
-  init(words: [String], isStatic:Bool = true) {
-    // params: list of words to filter through
-    self.isStatic = isStatic
-
-    // dedup the list first or expect them to be unique?
+  init(words: [T]) {
     self.listOfWords = words
 
     // empty root TrieWordNode
@@ -44,17 +39,17 @@ class Trie {
     }
   }
 
-  func addWordToTrie(word: String) {
+  func addWordToTrie(word: T) {
     // record the longest length in the search array for early termination
-    if word.count > longestLength {
-      longestLength = word.count
+    if word.stringify().count > longestLength {
+      longestLength = word.stringify().count
     }
 
     // follow existing path in trie until there is a difference in the words
     var curTrieWordNode = root
 
-    for letterIndex in 0..<word.count {
-      let letter = Character(String(word[letterIndex]))
+    for letterIndex in 0..<word.stringify().count {
+      let letter = Character(String(word.stringify()[letterIndex]))
 
       var foundLetter = false
       for child in curTrieWordNode.children where child.value! == letter { //optimize (flag or do based on length of words array) with a 26 char array?
@@ -64,7 +59,7 @@ class Trie {
 
       if !foundLetter {
         // we create a new TrieWordNode and path diverges here
-        let nextTrieWordNode = TrieWordNode(value: letter)
+        let nextTrieWordNode = TrieWordNode<T>(value: letter)
         curTrieWordNode.children.append(nextTrieWordNode)
         curTrieWordNode = nextTrieWordNode
       }
@@ -72,7 +67,7 @@ class Trie {
       // check if this is the last letter because we need to refer back to the original word for when we perform a search
       // OPTIMIZATION: space by just keeping the ref to the word rather than the actual word
       //               (can keep the index of the word in listOfWords array for simplicity)
-      if letterIndex == word.count - 1 {
+      if letterIndex == word.stringify().count - 1 {
         curTrieWordNode.word = word
         curTrieWordNode.isWord = true
       }
@@ -85,7 +80,7 @@ class Trie {
   // require a threshold of matched letters? e.g. if no letters are matched don't return anything vs if you're searching banana and give baga.. would be slower
   // cache last few searches? i.e. when the user looks for abc, then looks for abcd the abc TrieWordNode is stored
 
-  func returnAllPrefixMatches(search: String) -> [String] {
+  func returnAllPrefixMatches(search: String) -> [T] {
 
     // early termination if the search length is longer than the longest word in the search dictionary
     guard search.count <= longestLength else {
@@ -111,13 +106,13 @@ class Trie {
     return returnAll(currentRoot: curTrieWordNode)
   }
 
-  func returnAll(currentRoot: TrieWordNode) -> [String] {
-    var matchedWords = [String]()
+  func returnAll(currentRoot: TrieWordNode<T>) -> [T] {
+    var matchedWords = [T]()
 
-    let trieStack = Stack<TrieWordNode>()
+    let trieStack = Stack<TrieWordNode<T>>()
     trieStack.push(value: currentRoot)
     while !trieStack.isEmpty() {
-      var curTrieWordNode: TrieWordNode?
+      var curTrieWordNode: TrieWordNode<T>?
       do {
         curTrieWordNode = try trieStack.pop()
       } catch StackError.StackOutOfBoundsError {
@@ -137,4 +132,8 @@ class Trie {
     return matchedWords
   }
 
+}
+
+public protocol CanStringify {
+  func stringify() -> String
 }

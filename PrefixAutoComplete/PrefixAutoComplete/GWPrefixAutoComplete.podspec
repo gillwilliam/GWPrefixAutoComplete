@@ -26,6 +26,6 @@ An autocomplete feature that uses a trie as the underlying data structure.
   s.source           = { :git => 'https://github.com/gillwilliam/GWPrefixAutoComplete.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
-  s.source_files = 'Trie/*.swift', 'utils/*.swift'
+  s.source_files = 'PrefixAutoComplete/PrefixAutoComplete/Trie/*.swift', 'PrefixAutoComplete/PrefixAutoComplete/utils/*.swift'
 
 end

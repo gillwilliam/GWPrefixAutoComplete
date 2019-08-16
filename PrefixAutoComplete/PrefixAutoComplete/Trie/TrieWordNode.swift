@@ -8,12 +8,12 @@
 
 import Foundation
 
-class TrieWordNode {
+class TrieWordNode<T:CanStringify> {
 
   let value: Character?
   var children: [TrieWordNode]
   var isWord = false
-  var word: String?
+  var word: T?
 
   init(value: Character) {
     self.value = value
@@ -25,7 +25,7 @@ class TrieWordNode {
     self.children = []
   }
 
-  init(value: Character, word: String) {
+  init(value: Character, word: T) {
     self.word = word
     self.value = value
     children = []

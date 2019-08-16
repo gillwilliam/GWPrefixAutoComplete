@@ -27,10 +27,14 @@ class TrieTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 
     let testOne = ["abc", "bcde", "dabcbdc", "abcde"]
+    var testObjectList: [SampleObject] = []
+    for (idx, testString) in testOne.enumerated() {
+      testObjectList.append(SampleObject(value: idx, key: testString))
+    }
 
-    let myTrie = Trie(words: testOne)
+    let myTrie = Trie(words: testObjectList)
 
-    XCTAssert(myTrie.returnAllPrefixMatches(search: "ab") == ["abc", "abcde"], "basic test")
+    XCTAssert(myTrie.returnAllPrefixMatches(search: "ab") == [testObjectList[0], testObjectList[3]], "basic test")
   }
 
   func testRandom() {
