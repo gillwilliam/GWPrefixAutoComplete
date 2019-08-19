@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TrieWordNode<T:CanStringify> {
+class TrieWordNode<T:Trieable> {
 
   let value: Character?
   var children: [TrieWordNode]

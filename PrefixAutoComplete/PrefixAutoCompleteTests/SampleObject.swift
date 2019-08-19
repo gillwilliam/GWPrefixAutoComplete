@@ -10,18 +10,18 @@ import Foundation
 @testable import PrefixAutoComplete
 
 
-class SampleObject:CanStringify, Equatable {
+class SampleObject:Trieable, Equatable {
 
   let value: Int
   let key: String
 
+  var trieString: String {
+    return key
+  }
+
   init(value: Int, key: String) {
     self.value = value
     self.key = key
-  }
-
-  func stringify() -> String {
-    return key
   }
 
   static func == (lhs: SampleObject, rhs: SampleObject) -> Bool {

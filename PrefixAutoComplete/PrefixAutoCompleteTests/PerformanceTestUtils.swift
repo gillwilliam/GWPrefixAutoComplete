@@ -14,7 +14,7 @@ class PerformanceTestUtils {
 
     var returnWords = [String]()
     for word in words {
-      if word.contains(searchTerm) {
+      if word.prefix(searchTerm.count) == searchTerm {
         returnWords.append(word)
       }
     }

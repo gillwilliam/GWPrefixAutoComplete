@@ -37,20 +37,37 @@ class TrieTests: XCTestCase {
     XCTAssert(myTrie.returnAllPrefixMatches(search: "ab") == [testObjectList[0], testObjectList[3]], "basic test")
   }
 
-  func testRandom() {
-    let myRandomWords = PerformanceTestUtils().generateWords(numWords: 1000)
+//  func testRandomBruteForceTime() {
+//    let myRandomWords = PerformanceTestUtils().generateWords(numWords: 100)
+//    let randomSearchTerm = myRandomWords[Int(arc4random_uniform(UInt32(myRandomWords.count-1)))]
+//
+//    self.measure {
+//      PerformanceTestUtils().bruteForceSearch(words: myRandomWords, searchTerm: randomSearchTerm)
+//    }
+//  }
 
-    print(myRandomWords)
-
-    let randomSearchTerm = myRandomWords[Int(arc4random_uniform(UInt32(myRandomWords.count-1)))]
-    let bruteForceResults = PerformanceTestUtils().bruteForceSearch(words: myRandomWords, searchTerm: randomSearchTerm)
-
-    let myTrie = Trie(words: myRandomWords)
-    let trieSearchResults = myTrie.returnAllPrefixMatches(search: randomSearchTerm)
-    print(trieSearchResults)
-    print(bruteForceResults)
-    XCTAssert(trieSearchResults == bruteForceResults)
-  }
+//  func testRandomTrieTime() {
+//    let myRandomWords = PerformanceTestUtils().generateWords(numWords: 100000)
+//
+//    // print(myRandomWords)
+//
+//    let randomSearchTerm = myRandomWords[Int(arc4random_uniform(UInt32(myRandomWords.count-1)))]
+//    var bruteForceResults = [String]()
+//
+//    let myTrie = Trie(words: myRandomWords)
+//
+//    var trieSearchResults = [String]()
+//
+//    self.measure {
+//      trieSearchResults = myTrie.returnAllPrefixMatches(search: randomSearchTerm)
+//    }
+//
+//    bruteForceResults = PerformanceTestUtils().bruteForceSearch(words: myRandomWords, searchTerm: randomSearchTerm)
+//
+//    // print(trieSearchResults)
+//    // print(bruteForceResults)
+//    XCTAssert(trieSearchResults == bruteForceResults)
+//  }
 
   func testPerformanceExample() {
     // This is an example of a performance test case.
