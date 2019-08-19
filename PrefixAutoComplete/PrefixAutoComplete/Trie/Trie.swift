@@ -108,7 +108,7 @@ public class Trie<T: Trieable> {
     return returnAll(currentRoot: curTrieWordNode)
   }
 
-  public func returnAll(currentRoot: TrieWordNode<TrieableObject>) -> [TrieableObject] {
+  func returnAll(currentRoot: TrieWordNode<TrieableObject>) -> [TrieableObject] {
     var matchedWords = [TrieableObject]()
 
     let trieStack = Stack<TrieWordNode<TrieableObject>>()
