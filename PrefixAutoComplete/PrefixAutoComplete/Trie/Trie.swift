@@ -11,7 +11,7 @@ import Foundation
 // trie with level compression
 public class Trie<T: Trieable> {
 
-  typealias TrieableObject = T
+  public typealias TrieableObject = T
 
   let listOfWords: [TrieableObject]
   let root: TrieWordNode<TrieableObject>
@@ -23,7 +23,7 @@ public class Trie<T: Trieable> {
 
   //root TrieWordNode
 
-  init(words: [TrieableObject]) {
+  public init(words: [TrieableObject]) {
     self.listOfWords = words
 
     // empty root TrieWordNode
