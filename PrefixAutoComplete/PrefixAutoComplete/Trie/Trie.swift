@@ -41,7 +41,7 @@ public class Trie<T: Trieable> {
     }
   }
 
-  func addWordToTrie(word: TrieableObject) {
+  public func addWordToTrie(word: TrieableObject) {
     // record the longest length in the search array for early termination
     if word.trieString.count > longestLength {
       longestLength = word.trieString.count
@@ -82,7 +82,7 @@ public class Trie<T: Trieable> {
   // require a threshold of matched letters? e.g. if no letters are matched don't return anything vs if you're searching banana and give baga.. would be slower
   // cache last few searches? i.e. when the user looks for abc, then looks for abcd the abc TrieWordNode is stored
 
-  func returnAllPrefixMatches(search: String) -> [TrieableObject] {
+  public func returnAllPrefixMatches(search: String) -> [TrieableObject] {
 
     // early termination if the search length is longer than the longest word in the search dictionary
     guard search.count <= longestLength else {
@@ -108,7 +108,7 @@ public class Trie<T: Trieable> {
     return returnAll(currentRoot: curTrieWordNode)
   }
 
-  func returnAll(currentRoot: TrieWordNode<TrieableObject>) -> [TrieableObject] {
+  public func returnAll(currentRoot: TrieWordNode<TrieableObject>) -> [TrieableObject] {
     var matchedWords = [TrieableObject]()
 
     let trieStack = Stack<TrieWordNode<TrieableObject>>()
